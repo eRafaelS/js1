@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table, td, th {
+      border: 1px dashed black;
+      
+    }
+    td{
+      padding: 5px;
+    }
+    th, .steelblue, body table tfoot tr td{
+      background-color: steelblue;
+    }
+    th:hover{
+      background-color: lightskyblue;
+    }
+    td:first-letter{
+      font-weight: bold;
+      font-size: 20px;
+    }
+    form{
+      width: 20%;
+      margin: 25px auto 0 auto;
+      padding: 15px;
+      background-color: lightsteelblue;
+      border: 2px solid blue;
+      box-shadow: 2px 5px lightgreen;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 20px;
+    }
+    .tituloForm{
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    label{
+      display: block;
+      
+    }
+    .campoForm{
+      margin: 10px 0;
+    }
+    input, textarea{
+      border-radius: 5px;
+      width: 100%;
+    }
+    .butaoForm{
+      text-align: center;
+      
+    }
+    button{
+      padding: 5px;
+      border-radius: 7px;
+      background-color: rgb(10, 182, 250);
+    }
+
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Batata</td>
+        <td>R$3,20</td>
+        <td>5Kg</td>
+      </tr>
+      <tr>
+        <td>Manga</td>
+        <td>R$7,50</td>
+        <td>2Kg</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td classe="steelblue">Totais</td>
+        <td  classe="steelblue">10,70</td>
+        <td>7Kg</td>
+      </tr>  
+    </tfoot>
+  </table>
+  
+  <hr>
+
+  <form action="https://formspree.io/xrgygozp" method="POST">
+    <div>
+      <label class="tituloForm">Meu Formulário</label>
+    </div>
+    <div class="campoForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome_usuario" 
+      required placeholder="Seu Nome">
+    </div>
+
+    <div class="campoForm">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email_usuario" 
+      required required placeholder="Seu E-mail">  
+    </div>
+
+    <div class="campoForm">
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha_usuario" 
+      value="teste123">
+      <!--<input type="password" id="senha" name="senha_usuario" 
+      required placeholder="Crie uma senha">-->
+    </div>
+    
+    
+  <div class="campoForm">
+      <label for="mensagem">Msg:</label>
+      <textarea name="mensagem_usuario" id="mensagem" cols="30" rows="10" 
+      required required placeholder="Sua mensagem é importante..."></textarea>  
+    </div>
+
+    <div class="butaoForm">
+      <!--<input type="submit" value="Enviar">-->
+      <button type="submit">Enviar Formulário</button>
+    </div>
+  </form>
+
+</body>
+</html>
